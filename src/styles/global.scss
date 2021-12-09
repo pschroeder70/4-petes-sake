@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'hero';
 
 body {
   margin: 0;
@@ -14,4 +15,8 @@ main {
 
 button {
   font-size: 12px;
+}
+
+ul {
+  list-style-image: url('../images/sword-32x32.png');
 }
