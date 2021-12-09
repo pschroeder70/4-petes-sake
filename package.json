@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "4-petes-sake",
+  "version": "1.0.0",
+  "description": "My Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pschroeder70/4-petes-sake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pschroeder70/4-petes-sake/issues"
+  },
+  "homepage": "https://github.com/pschroeder70/4-petes-sake#readme",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  }
+}
