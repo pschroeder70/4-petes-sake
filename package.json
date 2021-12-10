@@ -17,6 +17,7 @@
     "postcss": "^8.4.4",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.0.1",
+    "react-router-dom": "^6.1.0",
     "sass": "^1.44.0",
     "sass-loader": "^12.4.0",
     "webpack": "^5.65.0",

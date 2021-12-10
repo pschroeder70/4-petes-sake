@@ -1,9 +1,15 @@
+import { Link } from 'react-router-dom';
+
 const Nav = () => {
   return (
     <nav>
-      <ul>
-        <li>Movie's</li>
-        <li>TV setup</li>
+      <ul className='nav-list'>
+        <li className='nav-list__item'>
+          <Link to='/movies'>Movies</Link>
+        </li>
+        <li className='nav-list__item'>
+          <Link to='/tv'>Theater</Link>
+        </li>
       </ul>
     </nav>
   );
