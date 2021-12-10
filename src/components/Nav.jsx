@@ -1,7 +1,10 @@
 const Nav = () => {
   return (
     <nav>
-      nav stuff
+      <ul>
+        <li>Movie's</li>
+        <li>TV setup</li>
+      </ul>
     </nav>
   );
 };
