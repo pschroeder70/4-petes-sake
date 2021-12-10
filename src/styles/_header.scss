@@ -1,9 +1,9 @@
+@use 'global';
+
 .header {
-  display: flex;
-  width: 100%;
-  max-width: var(--content-width);
+  @extend %content-width;
+  align-items: center;
   height: 100px;
-  margin: 0 auto;
 }
 
 .header__logo {
