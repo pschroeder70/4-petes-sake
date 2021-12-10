@@ -23,6 +23,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(ttf)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         type: 'asset',
       },

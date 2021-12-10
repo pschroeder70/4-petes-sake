@@ -1,21 +1,19 @@
 import '../styles/index.scss';
-import Recipes from './Recipes';
-import sword from '../images/swc-sword.png';
-import swordSvg from '../images/sword.svg';
+import Header from './Header';
+import Updates from './Updates';
+import Footer from './Footer';
 
 const App = () => {
   return (
     <>
-      <section className="hero"></section>
+      <Header />
       <main>
-        <section>
+        <section className="content-area">
           <h1>Hello react world!</h1>
         </section>
-        <img src={sword} alt="sword" width="250"/>
-        <Recipes />
-        <img src={swordSvg} alt="sword" width="50" />
+        <Updates />
       </main>
-
+      <Footer />
     </>
   );
 };
