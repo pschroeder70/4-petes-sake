@@ -4,7 +4,7 @@ const Footer = () => {
       <div className='footer__copywrite'>
         &copy; 2021 All Rights Reserved, I guess.
       </div>
-      <div className='footer__social-links'>*coming soon*</div>
+      <div className='footer__social-links'>social media links?</div>
     </section>
   );
 };

@@ -6,31 +6,22 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 let mode = 'development';
 let target = 'web';
 
-if(process.env.NODE_ENV === 'production') {
-  mode = 'production';
-  target = 'browserslist';
-}
-
 module.exports = {
   mode: mode,
   target: target,
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'images/[hash][ext][query]'
+    path: path.resolve(__dirname, 'dist')
   },
 
   module: {
     rules: [
       {
-        test: /\.(ttf)$/,
-        use: {
-          loader: 'url-loader',
-        },
-      },
-      {
         test: /\.(png|jpe?g|gif)$/i,
-        type: 'asset',
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
       },
       {
         test: /\.(svg)$/i,
@@ -40,18 +31,25 @@ module.exports = {
         test: /\.(s[ac]|c)ss$/i,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader, 
+            loader: MiniCssExtractPlugin.loader,
             options: { publicPath: '' },
           },
-          'css-loader', 
-          'postcss-loader', 
+          'css-loader',
+          'postcss-loader',
           'sass-loader',
         ],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
       },
     ],
   },
