@@ -23,7 +23,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ttf)$/,
+        test: /\.(woff|woff2)$/,
         use: {
           loader: 'url-loader',
         },

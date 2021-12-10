@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <section className="header">
-      <div className="logo">4 Petes Sake</div>
+      <div className="header__logo">4 Petes Sake</div>
       nav
     </section>
   );

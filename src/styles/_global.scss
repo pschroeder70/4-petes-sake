@@ -1,8 +1,12 @@
 @use 'variables';
+@use 'fonts';
 
-body {
+body,
+#root {
+  width: 100%;
+  height: 100vh;
   margin: 0;
-  background-color: variables.$bg;
+  background-color: var(--siteBG);
   color: var(--text);
 }
 
