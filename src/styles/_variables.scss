@@ -1,5 +1,14 @@
 :root {
-  --siteBG: peachpuff;
+  --color-one: #070707;
+  --color-two: #ec5cbb;
+  --color-three: #3524fe;
+  --color-four: #611c1e;
+  --color-five: #fc1c14;
+
   --content-width: 1300px;
-  --text: #000;
+
+  --nav-color: var(--color-four);
+  --text: var(--color-one);
+  --link: var(--color-three);
+  --content-bg-color: #fff;
 }
