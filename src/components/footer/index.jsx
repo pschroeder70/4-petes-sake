@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='footer__social-links'>
           <ul className='list--inline'>
             <li className='list__item'>
-              <a href='mailto:4petessake@protonmail.com' target='_blank'>eMail</a>
+              <a href='https://letterboxd.com/4kFan/' target='_blank'>Letterboxd</a>
             </li>
             <li className='list__item'>
               <a href='https://twitter.com/real4PetesSake' target='_blank'>Twitter</a>
@@ -18,6 +18,9 @@ const Footer = () => {
             </li>
             <li className='list__item'>
               <a href='https://www.facebook.com/profile.php?id=100076062157378' target='_blank'>Facebook</a>
+            </li>
+            <li className='list__item'>
+              <a href='mailto:4petessake@protonmail.com' target='_blank'>eMail</a>
             </li>
           </ul>
         </div>
