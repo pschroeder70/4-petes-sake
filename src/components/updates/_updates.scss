@@ -1,0 +1,14 @@
+.updates {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: 2px 2px;
+}
+
+.updates__title {
+  font-family: 'Audiowide';
+  text-align: center;
+}

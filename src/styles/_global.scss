@@ -13,27 +13,55 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0;
-  background-color: var(--siteBG);
   font-family: 'Roboto';
   color: var(--text);
 }
 
 #root {
   display: flex;
-  flex: 1 0 auto;
   flex-direction: column;
   height: 100%;
 }
 
 main {
-  @extend %content-width;
-  flex: 1 1 auto;
-  .content-area {
-    width: 100%;
-  }
+  display: flex;
+  flex: 1 0 auto;
+  background: var(--content-bg-color);
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content-area {
+  @extend %content-width;
+  padding: 0 0 45px;
+}
+
+.content-area__body {
+  flex: 1 0 auto;
+}
+
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list--inline {
+  display: flex;
+
+}
+
+.list__item {
+  padding: 0 15px;
+  &:first-of-type {
+    padding-left: 0;
+  }
 }
 
 button {

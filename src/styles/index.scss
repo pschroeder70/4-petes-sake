@@ -1,5 +1,8 @@
-@use 'global';
-@use 'header';
-@use 'nav';
-@use 'updates';
-@use 'footer';
+@use './global';
+@use './typography';
+@use './fonts';
+@use './variables';
+@use '../components/header/header';
+@use '../components/nav/nav';
+@use '../components/updates/updates';
+@use '../components/footer/footer';

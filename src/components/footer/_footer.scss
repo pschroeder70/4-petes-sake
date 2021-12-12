@@ -1,4 +1,4 @@
-@use 'global';
+@use '../../styles/global';
 
 .footer {
   @extend %content-width;
@@ -8,4 +8,5 @@
 
 .footer__copywrite {
   flex: 1 0 auto;
+  font-size: 12px;
 }
