@@ -2,11 +2,11 @@ import filmCell from '../images/film.svg';
 
 const Home = () => {
   return (
-    <>
-      <h1>Hello this is the start</h1>
+    <div className="home">
+      <h1>Coming Soon</h1>
+      <img src={ filmCell } alt='test' width="25%"/>
       <p>This is a work in progress</p>
-      <img src={ filmCell } alt='test' width="50%"/>
-    </>
+    </div>
   );
 };
 

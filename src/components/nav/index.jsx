@@ -1,22 +1,22 @@
 import { Link } from 'react-router-dom';
 
 const Nav = (props) => {
-  function openMenu(e) {
-    e.currentTarget.classList.toggle('nav__icon--open');
+  function openMenu() {
+    document.querySelector('.nav').classList.toggle('nav--open');
   }
 
   return (
-    <nav data-module='nav'>
+    <nav className='nav'>
       <div className='nav__icon' onClick={openMenu}>
         <span></span>
-        <ul className='list list--nav'>
-          <li className='list__item'>
+        <ul className='nav__list'>
+          <li className='nav__list-item'>
             <Link to='/movies'>Movies</Link>
           </li>
-          <li className='list__item'>
+          <li className='nav__list-item'>
             <Link to='/tv'>Theater</Link>
           </li>
-          <li className='list__item'>
+          <li className='nav__list-item'>
             <Link to='/'>Home</Link>
           </li>
         </ul>

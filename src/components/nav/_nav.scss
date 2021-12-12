@@ -1,11 +1,28 @@
 nav {
+  position: relative;
   display: flex;
   flex: 0 1 auto;
   align-items: center;
 }
 
-.list--nav {
-  display: none;
+.nav__list {
+  transition: all .3s linear;
+  background: #fff;
+  display: flex;
+  position: absolute;
+  top: -150px;
+  right: -2px;
+  flex-direction: column;
+  padding: 150px 15px 15px;
+  font-size: 34px;
+  text-align: right;
+  border: 4px solid var(--nav-color);
+  opacity: 0;
+}
+
+.nav--open .nav__list {
+  top: -50px;
+  opacity: 1;
 }
 
 .nav__icon {
@@ -13,7 +30,7 @@ nav {
   width: 43px;
   position: relative;
   display: flex;
-  z-index: 20;
+  z-index: 500;
 }
 
 .nav__icon span {
@@ -26,6 +43,7 @@ nav {
   position: absolute;
   left: 0;
   top: 50%;
+  z-index: 500;
 }
 
 .nav__icon:before,
@@ -41,6 +59,7 @@ nav {
   transform-origin: center center;
   transform: rotate(0deg);
   transition: all 0.3s ease;
+  z-index: 500;
 }
 
 .nav__icon:before {
@@ -53,20 +72,20 @@ nav {
   margin-bottom: -2px;
 }
 
-.nav__icon--open .list--nav {
+.nav--open .nav__list {
   display: flex;
 }
 
-.nav__icon--open span {
+.nav--open .nav__icon span {
   background: transparent;
 }
 
-.nav__icon--open:before {
+.nav--open .nav__icon:before {
   top: 50%;
   transform: rotate(45deg);
 }
 
-.nav__icon--open:after {
+.nav--open .nav__icon:after {
   bottom: 50%;
   transform: rotate(-45deg);
 }
