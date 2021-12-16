@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-let mode = 'development'; // 'production';
+let mode = 'production'; // 'development';
 let target = 'web';
 
 module.exports = {
@@ -17,21 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.mp4$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext][query]'
-        }
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext][query]'
-        }
-      },
-      {
-        test: /\.(svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|mp4)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext][query]'
@@ -39,15 +25,10 @@ module.exports = {
       },
       {
         test: /\.(s[ac]|c)ss$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: '' },
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader','postcss-loader','sass-loader'],
+        generator: {
+          filename: 'styles/[hash][ext][query]'
+        }
       },
       {
         test: /\.jsx?$/,
@@ -58,7 +39,7 @@ module.exports = {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[hash][ext][query]'
+          filename: 'fonts/[name][ext][query]'
         }
       },
     ],
@@ -80,7 +61,7 @@ module.exports = {
     hints: false
   },
 
-  devtool: 'source-map',
+  // devtool: 'source-map',
 
   devServer: {
     static: './dist',

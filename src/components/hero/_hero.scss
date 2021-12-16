@@ -1,7 +1,17 @@
-@use '../../styles/global';
+.hero {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+}
 
 video {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: calc(var(--full-height) / 2);
+  height: calc(var(--full-height) - 150px);
+  min-height: 500px;
   object-fit: fill;
+  z-index: -5;
 }

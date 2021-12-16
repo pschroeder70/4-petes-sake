@@ -18,18 +18,6 @@ const App = () => {
       <Hero 
         video={filmRole}
       />
-      <main>
-        <section className='content-area'>
-          <div className='content-area__body'>
-            <Routes>
-              <Route exact path='/' element={<Home />} />
-              <Route path='/movies' element={<Movies />} />
-              <Route path='/tv' element={<Theater />} />
-            </Routes>
-          </div>
-          <Updates />
-        </section>
-      </main>
       <Footer />
     </Router>
   );
