@@ -1,0 +1,7 @@
+@use '../../styles/global';
+
+video {
+  width: 100%;
+  height: calc(var(--full-height) / 2);
+  object-fit: fill;
+}

@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-let mode = 'production';  //development
+let mode = 'development'; // 'production';
 let target = 'web';
 
 module.exports = {
@@ -16,6 +16,13 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.mp4$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext][query]'
+        }
+      },
       {
         test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource',
@@ -69,10 +76,15 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
 
+  performance: {
+    hints: false
+  },
+
   devtool: 'source-map',
 
   devServer: {
     static: './dist',
     hot: true,
   },
+  
 };
