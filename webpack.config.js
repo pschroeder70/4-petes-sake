@@ -1,71 +1,36 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
-let mode = 'production'; // 'development';
-let target = 'web';
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  mode: mode,
-  target: target,
-
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpe?g|gif|svg|mp4)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext][query]'
-        }
-      },
-      {
-        test: /\.(s[ac]|c)ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader','postcss-loader','sass-loader'],
-        generator: {
-          filename: 'styles/[hash][ext][query]'
-        }
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[name][ext][query]'
-        }
-      },
-    ],
-  },
-
-  plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
+  // Where files should be sent once they are bundled
+ output: {
+   path: path.join(__dirname, '/dist'),
+   filename: 'index.bundle.js'
+ },
+  // webpack 5 comes with devServer which loads in development mode
+ devServer: {
+   port: 3000,
+   static: true
+ },
+  // Rules of how webpack will take our files, complie & bundle them for the browser 
+ module: {
+   rules: [
+     {
+       test: /\.(js|jsx)$/,
+       exclude: /nodeModules/,
+       use: {
+         loader: 'babel-loader'
+       }
+     },
+     {
+       test: /\.css$/,
+       use: [MiniCssExtractPlugin.loader, 'css-loader']
+     }
+   ]
+ },
+ plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new MiniCssExtractPlugin
   ],
-
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-
-  performance: {
-    hints: false
-  },
-
-  // devtool: 'source-map',
-
-  devServer: {
-    static: './dist',
-    hot: true,
-  },
-  
-};
+}
