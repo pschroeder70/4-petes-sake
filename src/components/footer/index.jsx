@@ -1,9 +1,9 @@
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer>
       <div className='footer'>
         <div className='footer__copywrite'>
-          &copy; 2021 All Rights Reserved, I guess.
+          &copy; 2021 All Rights Reserved, I guess?
         </div>
         <div className='footer__social-links'>
           <ul className='list--inline'>

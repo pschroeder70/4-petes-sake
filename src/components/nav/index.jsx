@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Nav = (props) => {
+const Nav = () => {
   function openMenu() {
     document.querySelector('.nav').classList.toggle('nav--open');
   }

@@ -1,10 +1,8 @@
-const Updates = () => {
+const Updates = (props) => {
   return (
     <aside className='updates'>
-      <h3 className='updates__title'>What's New?</h3>
-      <ul>
-        <li>Nothing, just started this...</li>
-      </ul>
+      <h3 className='updates__title'>{props.title}</h3>
+      {props.children}
     </aside>
   );
 };
