@@ -1,0 +1,9 @@
+@use './global';
+@use './typography';
+@use './fonts';
+@use './variables';
+@use '../components/header/header';
+@use '../components/nav/nav';
+@use '../components/hero/hero';
+@use '../components/updates/updates';
+@use '../components/footer/footer';
