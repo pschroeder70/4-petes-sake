@@ -1,6 +1,6 @@
-@use '../../styles/global';
-
 .header {
+  display: flex;
+  justify-content: center;
   position: sticky;
   top: 0;
   height: 100px;
@@ -8,7 +8,7 @@
 }
 
 .header__content {
-  @extend %content-width;
+  width: var(--content-width);
 }
 
 .header__logo {
