@@ -5,20 +5,3 @@
   align-items: center;
   justify-content: center;
 }
-
-video {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: calc(var(--full-height) - 150px);
-  min-height: 100%;
-  object-fit: fill;
-  z-index: -5;
-}
-
-
-@media (min-width: var(--break-tablet)) {
-  video {
-    min-height: 500px;
-  }
-}

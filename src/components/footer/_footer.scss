@@ -1,13 +1,24 @@
-@use '../../styles/global';
+footer {
+  display: flex;
+  justify-content: center;
+}
 
 .footer {
-  @extend %content-width;
+  display: flex;
+  width: var(--content-width);
   align-items: center;
   height: 50px;
   
 }
 
-.footer__copywrite {
+.footer__copywrite,
+.footer__social-links {
   flex: 1 0 auto;
   font-size: 12px;
+}
+
+.footer__social-links {
+  ul {
+    justify-content: flex-end;
+  }
 }
