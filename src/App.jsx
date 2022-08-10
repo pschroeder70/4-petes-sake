@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './sass/main.scss'
-import Header from './components/header'
 import Section from './components/section'
 import Content from './components/content'
 import Hero from './components/hero'
