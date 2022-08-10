@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-let mode = 'production'; // 'development';
+let mode = 'development'; // 'production';
 let target = 'web';
 
 module.exports = {
