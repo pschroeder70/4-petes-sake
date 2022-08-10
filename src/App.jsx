@@ -8,10 +8,6 @@ import Hero from './components/hero'
 import Updates from './components/updates'
 import Footer from './components/footer'
 
-import Home from './pages/Home'
-import Movies from './pages/movies'
-import Theater from './pages/theater'
-
 const App = () => {
   return (
     <>
