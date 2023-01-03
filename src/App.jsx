@@ -1,38 +1,55 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './sass/main.scss'
-import Header from './components/header'
-import Section from './components/section'
-import Content from './components/content'
-import Hero from './components/hero'
-import Updates from './components/updates'
-import Footer from './components/footer'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./sass/main.scss";
+import Header from "./components/header/";
+import Section from "./components/section";
+import Content from "./components/content";
+import Hero from "./components/hero";
+import Stats from "./components/stats";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
     <>
-      <Header 
-        headerTitle="4 Petes Sake"
-      >
-      </Header>
+      <Header headerTitle="4 Petes Sake"></Header>
       <Section>
-        <Hero>this is the hero section</Hero>
+        <Hero>This is my fight to get back in shape, at 52 years old!</Hero>
       </Section>
       <Section>
         <Content>
-          <h2>Testing Content 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. Amet porttitor eget dolor morbi non arcu. Ultricies leo integer malesuada nunc vel. Pellentesque sit amet porttitor eget. Porttitor massa id neque aliquam vestibulum morbi. Suspendisse potenti nullam ac tortor vitae purus. Nisl purus in mollis nunc sed id semper. Suscipit tellus mauris a diam maecenas sed. </p>
-          <p>Est placerat in egestas erat imperdiet sed euismod nisi. Integer malesuada nunc vel risus. Mi eget mauris pharetra et ultrices neque ornare. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Lacus viverra vitae congue eu consequat ac. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Ut venenatis tellus in metus vulputate eu. Pellentesque diam volutpat commodo sed egestas.</p>
-
-          <h2>Testing Content 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem. Amet porttitor eget dolor morbi non arcu.</p>
-          <p>Ultricies leo integer malesuada nunc vel. Pellentesque sit amet porttitor eget. Porttitor massa id neque aliquam vestibulum morbi. Suspendisse potenti nullam ac tortor vitae purus. Nisl purus in mollis nunc sed id semper. Suscipit tellus mauris a diam maecenas sed. </p>
-          <p>Est placerat in egestas erat imperdiet sed euismod nisi. Integer malesuada nunc vel risus. Mi eget mauris pharetra et ultrices neque ornare. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Lacus viverra vitae congue eu consequat ac. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Ut venenatis tellus in metus vulputate eu. Pellentesque diam volutpat commodo sed egestas.</p>
+          <h2>Some History</h2>
+          <p>I have let myself go...a lot.</p>
+          <p>
+            Few years back I was diagnosed with arthritis, and due to being a
+            contractor and medical insurance being wonky, I didn't get
+            midication for a while. So I spent almost a year sitting on my ass,
+            eating shit food, and not doing much of anything but working (I am a
+            web developer so I sit most of the time, and yes, this site sucks,
+            it's not a porfolio piece, it's just a way simple way to keep track
+            of what I am doing without having to hand write it).
+          </p>
+          <p>
+            Now I have been on medication for a few years now, and it works
+            great. I have pretty much full mobility, and really have no excuse
+            as to why I kept slacking off...other then I am a lazy dude.
+          </p>
+          <p>
+            Well my youngest daughter is about to graduate, and I think it's
+            time to get my shit together. Not for her, not for my wife (though
+            she deserves a better looking me, she's amazing!) but for me.
+          </p>
+          <p>
+            I just purchased a Marcy 150 stack home gym, it's not the best, but
+            it will fit my life right now. It should arrive on Jan. 13th. That's
+            when this gets going.
+          </p>
         </Content>
-        <Updates title="What's New">
-          <ul>
-            <li>Nothing, just started this...</li>
-          </ul>
-        </Updates>
+        <Stats
+          title="My Stats @ the Start"
+          age="52 years"
+          weight="TBD @ start"
+          height="5 ft 8 inch"
+          bmi="TBD @ start"
+        ></Stats>
       </Section>
       <Footer />
     </>
