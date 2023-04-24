@@ -8,18 +8,11 @@ const Stats = (props) => {
           <span>{props.age}</span>
         </li>
         <li>
-          <span>Weight :</span>
-          <span>{props.weight}</span>
-        </li>
-        <li>
           <span>Height :</span>
           <span>{props.height}</span>
         </li>
-        <li>
-          <span>Est BMI :</span>
-          <span>{props.bmi}</span>
-        </li>
       </ul>
+      <a href="https://www.patreon.com/4PetesSake" target="_new">$ Patreon $</a>
     </aside>
   );
 };
