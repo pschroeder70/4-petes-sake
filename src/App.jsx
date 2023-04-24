@@ -21,12 +21,7 @@ const App = () => {
           <p>Got laid off a few months ago</p>
           <p>Having a bit of a mid-life crisis, not sure what I am doing.</p>
           <p>
-            Well my youngest daughter is about to graduate, and I think it's
-            time to get my shit together. Not for her, not for my wife (though
-            she deserves a better looking me, she's amazing!) but for me.
-          </p>
-          <p>
-            What next?  Go back to the same old grind?
+            What is next?
           </p>
         </Content>
         <Stats
