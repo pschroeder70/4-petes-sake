@@ -10,6 +10,9 @@ const Footer = (props) => {
             <li className='list__item'>
               <a href='mailto:4petessake@protonmail.com' target='_blank'>eMail</a>
             </li>
+            <li className='list__item'>
+              <a href="https://www.patreon.com/4PetesSake" target="_new">$ Patreon $</a>
+            </li>
           </ul>
         </div>
       </div>

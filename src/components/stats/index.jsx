@@ -12,7 +12,6 @@ const Stats = (props) => {
           <span>{props.height}</span>
         </li>
       </ul>
-      <a href="https://www.patreon.com/4PetesSake" target="_new">$ Patreon $</a>
     </aside>
   );
 };

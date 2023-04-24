@@ -17,7 +17,7 @@ const App = () => {
       <Section>
         <Content>
           <h2>Some History</h2>
-          <p>I have developed websites for the last 30 years</p>
+          <p>I have developed websites for the last 30 years.</p>
           <p>Got laid off a few months ago</p>
           <p>Having a bit of a mid-life crisis, not sure what I am doing.</p>
           <p>
