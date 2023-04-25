@@ -16,13 +16,8 @@ const App = () => {
       </Section>
       <Section>
         <Content>
-          <h2>Some History</h2>
-          <p>I have developed websites for the last 30 years.</p>
-          <p>Got laid off a few months ago</p>
-          <p>Having a bit of a mid-life crisis, not sure what I am doing.</p>
-          <p>
-            What is next?
-          </p>
+          <h2>Get ya t-shirts...</h2>
+          <a href="4PetesSakeShirts.etsy.com">4 Petes Sake Shirts</a></p>
         </Content>
         <Stats
           title="Some fun stuff should be over here"
