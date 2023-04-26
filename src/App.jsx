@@ -17,7 +17,7 @@ const App = () => {
       <Section>
         <Content>
           <h2>Get ya t-shirts...</h2>
-          <a href="4PetesSakeShirts.etsy.com">4 Petes Sake Shirts</a></p>
+          <p><a href="4PetesSakeShirts.etsy.com">4 Petes Sake Shirts</a></p>
         </Content>
         <Stats
           title="Some fun stuff should be over here"
