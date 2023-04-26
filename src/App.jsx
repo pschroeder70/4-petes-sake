@@ -12,7 +12,7 @@ const App = () => {
     <>
       <Header headerTitle="4 Petes Sake"></Header>
       <Section>
-        <Hero>I am 52 and have no idea what I am doing anymore.</Hero>
+        <Hero><a href="4PetesSakeShirts.etsy.com">4 Petes Sake Shirts</a></Hero>
       </Section>
       <Section>
         <Content>
