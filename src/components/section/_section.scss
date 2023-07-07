@@ -1,13 +1,16 @@
 .section {
   position: relative;
   display: flex;
-  width: 100vw;
   align-items: center;
   justify-content: center;
 }
 
 .section__content {
   display: flex;
-  width: 100%;
   max-width: var(--content-width);
+}
+
+.section__content--date {
+  font-size: .7em;
+  margin-bottom: 12px;
 }

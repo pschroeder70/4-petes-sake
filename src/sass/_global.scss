@@ -1,9 +1,14 @@
 body {
-  width: 100%;
-  height: 100vh;
   margin: 0;
   font-family: 'Roboto';
+  font-size: 1em;
   color: var(--text);
+}
+
+#app {
+  width: 95vw;
+  height: 99vh;
+  margin: auto;
 }
 
 ul {

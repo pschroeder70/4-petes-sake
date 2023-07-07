@@ -3,18 +3,19 @@
   flex-direction: column;
   width: 20%;
   margin-left: 50px;
-  padding: 15px;
+  padding: 15px 50px;
   border-left: 1px solid #000;
 }
 
 .stats__title {
-  font-family: 'Audiowide';
   text-align: center;
 }
 
 .stats__discription {
   li {
     list-style: none;
+    font-size: .9em;
+    color: var(--color-six);
     margin: 5px 0;
   }
   span {

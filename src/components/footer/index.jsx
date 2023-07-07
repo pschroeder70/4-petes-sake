@@ -8,9 +8,6 @@ const Footer = (props) => {
         <div className='footer__social-links'>
           <ul className='list--inline'>
             <li className='list__item'>
-              <a href='https://www.4PetesSakeShirts.etsy.com' target='_blank'>Store</a>
-            </li>
-            <li className='list__item'>
               <a href='mailto:4petessake@protonmail.com' target='_blank'>eMail</a>
             </li>
             <li className='list__item'>

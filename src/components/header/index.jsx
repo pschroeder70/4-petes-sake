@@ -4,8 +4,8 @@ const Header = (props) => {
   return (
     <header className="header">
     <div className="header__content">
-      <div className="header__logo">FPS For Petes Sake</div>
-      <Hero><a href='https://www.4PetesSakeShirts.etsy.com' target='_blank'>4 Petes Sake Shirts</a></Hero>
+      <div className="header__content-logo">FPS For Petes Sake</div>
+      <div className="header__content-copy">** What should go here? ideas? **</div>
     </div>
   </header>
   );
