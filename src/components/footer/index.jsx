@@ -3,7 +3,7 @@ const Footer = (props) => {
     <footer>
       <div className='footer'>
         <div className='footer__copywrite'>
-          &copy; 2021 All Rights Reserved, I guess?
+          &copy; {new Date().getFullYear()} All Rights Reserved, I guess?
         </div>
         <div className='footer__social-links'>
           <ul className='list--inline'>
