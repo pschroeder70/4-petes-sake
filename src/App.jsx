@@ -2,12 +2,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./sass/main.scss";
 
-import Home from "./components/Pages/Home";
-import HomeTheater from "./components/pages/HomeTheater";
-import GarageBar from "./components/pages/GarageBar";
-import Section from "./components/Section";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Home from "./components/Pages/Home.jsx";
+import HomeTheater from "./components/pages/HomeTheater.jsx";
+import GarageBar from "./components/pages/GarageBar.jsx";
+import Section from "./components/Section.jsx";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import SideBar from "./components/SideBar";
+import Movies from "./components/Pages/Movies.jsx";
 
 const App = () => {
   return (
@@ -16,11 +18,12 @@ const App = () => {
         <Header headerTitle='4 Petes Sake' />
         <Section>
           <Routes>
-            <Route path='/' exact element={<Home />} />
-            <Route path='/HomeTheater' exact element={<HomeTheater />} />
-            <Route path='/GarageBar' exact element={<GarageBar />} />
+            <Route path='/*' element={<Home />} />
+            <Route path='/HomeTheater' element={<HomeTheater />} />
+            <Route path='/GarageBar' element={<GarageBar />} />
+            <Route path='/Movies' element={<Movies />} />
           </Routes>
-          <Stats title='Some Stuff'></Stats>
+          <SideBar title='Some Stuff'></SideBar>
         </Section>
         <Footer />
       </Router>

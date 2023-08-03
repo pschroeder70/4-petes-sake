@@ -25,6 +25,11 @@ function SideBar(props) {
             Garage Bar
           </Link>
         </li>
+        <li className='sidebar-menu__item'>
+          <Link to='/Movies' className='nav-links'>
+            Movie Collection
+          </Link>
+        </li>
       </ul>
     </aside>
   );
