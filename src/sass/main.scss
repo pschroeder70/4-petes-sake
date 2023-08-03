@@ -3,10 +3,8 @@
 @use 'fonts';
 @use 'variables';
 
-@use '../components/section/section';
-@use '../components/content/content';
-@use '../components/header/header';
-@use '../components/nav/nav';
-@use '../components/hero/hero';
-@use '../components/stats/stats';
-@use '../components/footer/footer';
+@use '../components/Section';
+@use '../components/header';
+@use '../components/sidebar';
+@use '../components/footer';
+@use '../components/Pages/main';

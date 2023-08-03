@@ -8,6 +8,7 @@
 .section__content {
   display: flex;
   max-width: var(--content-width);
+  width: 100%;
 }
 
 .section__content--date {

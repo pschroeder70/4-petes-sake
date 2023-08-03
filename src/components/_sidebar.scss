@@ -1,4 +1,4 @@
-.stats {
+.sidebar {
   display: flex;
   flex-direction: column;
   width: 20%;
@@ -7,11 +7,11 @@
   border-left: 1px solid #000;
 }
 
-.stats__title {
+.sidebar__title {
   text-align: center;
 }
 
-.stats__discription {
+.sidebar-menu {
   li {
     list-style: none;
     font-size: .9em;
