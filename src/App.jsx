@@ -2,14 +2,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./sass/main.scss";
 
-import Home from "./components/Pages/Home.jsx";
-import HomeTheater from "./components/pages/HomeTheater.jsx";
-import GarageBar from "./components/pages/GarageBar.jsx";
-import Section from "./components/Section.jsx";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Section from "./components/Section";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
-import Movies from "./components/Pages/Movies.jsx";
+import Home from "./Pages/home";
+import HomeTheater from "./Pages/HomeTheater";
+import GarageBar from "./Pages/GarageBar";
+import Movies from "./Pages/Movies";
 
 const App = () => {
   return (
