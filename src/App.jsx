@@ -9,7 +9,7 @@ import SideBar from "./components/SideBar";
 import Home from "./Pages/Home";
 import HomeTheater from "./Pages/HomeTheater";
 import GarageBar from "./Pages/GarageBar";
-import Movies from "./Pages/Movies";
+import MovieList from "./Pages/MovieList";
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
             <Route path='/*' element={<Home />} />
             <Route path='/HomeTheater' element={<HomeTheater />} />
             <Route path='/GarageBar' element={<GarageBar />} />
-            <Route path='/Movies' element={<Movies />} />
+            <Route path='/Movies' element={<MovieList />} />
           </Routes>
           <SideBar title='Some Stuff'></SideBar>
         </Section>
