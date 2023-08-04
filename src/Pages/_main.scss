@@ -14,4 +14,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  font-size: 12px;
+}
+
+.load-more {
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: var(--color-yellow);
 }

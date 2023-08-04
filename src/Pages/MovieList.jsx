@@ -4,12 +4,14 @@ import MovieCard from "./../components/MovieCard";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const limit = 30; // Number of movies to fetch per page
 
   useEffect(() => {
     const apiKey = "e0624cd3b3620a1cb6ffa08b3bca2eb0";
     const url =
-      "https://api.themoviedb.org/3/account/9901303/favorite/movies?language=en-US&page=1&sort_by=created_at.asc";
-
+      "https://api.themoviedb.org/3/account/9901303/favorite/movies?language=en-US&sort_by=created_at.asc";
     const options = {
       headers: {
         accept: "application/json",
@@ -18,24 +20,36 @@ const MovieList = () => {
       },
     };
 
-    axios
-      .get(url, options)
-      .then((response) => {
+    const fetchMovies = async (page) => {
+      try {
+        const response = await axios.get(`${url}&page=${page}`, options);
         const data = response.data;
-        // Sort movies alphabetically by title
-        data.results.sort((a, b) => a.title.localeCompare(b.title));
-        setMovies(data.results);
-      })
-      .catch((error) => {
+        setMovies((prevMovies) => [...prevMovies, ...data.results]);
+        setTotalPages(data.total_pages);
+      } catch (error) {
         console.error("Error fetching movies:", error);
-      });
-  }, []);
+      }
+    };
+
+    fetchMovies(currentPage);
+  }, [currentPage]);
+
+  const handleLoadMore = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
 
   return (
     <div className='movie-list'>
       {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
+      {currentPage < totalPages && (
+        <div className="load-more">
+          <button onClick={handleLoadMore} className="load-more--btn">Load More</button>
+        </div>
+      )}
     </div>
   );
 };
