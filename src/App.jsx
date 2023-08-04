@@ -6,7 +6,7 @@ import Section from "./components/Section";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
-import Home from "./Pages/home";
+import Home from "./Pages/Home";
 import HomeTheater from "./Pages/HomeTheater";
 import GarageBar from "./Pages/GarageBar";
 import Movies from "./Pages/Movies";
