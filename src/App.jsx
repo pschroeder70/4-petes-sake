@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import HomeTheater from "./Pages/HomeTheater";
 import GarageBar from "./Pages/GarageBar";
 import MovieList from "./Pages/MovieList";
+import MovieSearch from "./Pages/MovieSearch";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path='/HomeTheater' element={<HomeTheater />} />
             <Route path='/GarageBar' element={<GarageBar />} />
             <Route path='/Movies' element={<MovieList />} />
+            <Route path='/MovieSearch' element={<MovieSearch />} />
           </Routes>
           <SideBar title='Some Stuff'></SideBar>
         </Section>

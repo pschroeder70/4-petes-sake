@@ -1,0 +1,26 @@
+.movie-tile {
+  background-color: var(--color-lt-gray);
+  box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  border-radius: 0.25em;
+  display: flex;
+  width: calc(50% - 60px);
+  margin: 15px;
+  padding: 15px;
+  img {
+    border-radius: 0.25em;
+    height: 160px;
+  }
+}
+
+.movie-tile__copy {
+  margin-left: 15px;
+  &-title {
+    font-size: 20px;
+  }
+  &-release {
+    font-size: 12px;
+  }
+  &-overview {
+    font-size: 14px;
+  }
+}

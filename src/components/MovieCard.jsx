@@ -6,7 +6,6 @@ function MovieCard({ movie }) {
       <div className='movie-card__top'>
         <div className='movie-card__top-data'>
           <p className='movie-card__title'>{movie.title}</p>
-          <p className='movie-card__release'>{movie.release_date}</p>
         </div>
         <div className='movie-card__top-image'>
           <img
@@ -16,7 +15,12 @@ function MovieCard({ movie }) {
           />
         </div>
       </div>
-      <div className='movie-card__overview'>{movie.overview}</div>
+      <div className='movie-card__bottom'>
+        <p className='movie-card__release'>
+          Release Date : {movie.release_date}
+        </p>
+      </div>
+      {/* <div className='movie-card__overview'{">"}{movie.overview}</div> */}
     </div>
   );
 }

@@ -1,9 +1,10 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  margin-left: 50px;
-  padding: 15px 50px;
+  width: 10%;
+  min-width: 130px;
+  margin-left: 15px;
+  padding: 15px 25px;
   border-left: 1px solid #000;
 }
 
@@ -14,7 +15,7 @@
 .sidebar-menu {
   li {
     list-style: none;
-    font-size: .9em;
+    font-size: 0.9em;
     color: var(--color-six);
     margin: 5px 0;
   }

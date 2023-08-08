@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import MovieCard from "./../components/MovieCard";
+import MovieTile from "./../components/MovieTile";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -43,11 +43,13 @@ const MovieList = () => {
   return (
     <div className='movie-list'>
       {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
+        <MovieTile key={movie.id} movie={movie} />
       ))}
       {currentPage < totalPages && (
-        <div className="load-more">
-          <button onClick={handleLoadMore} className="load-more--btn">Load More</button>
+        <div className='load-more'>
+          <button onClick={handleLoadMore} className='load-more--btn'>
+            Load More
+          </button>
         </div>
       )}
     </div>

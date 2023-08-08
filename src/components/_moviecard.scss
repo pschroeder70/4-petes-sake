@@ -4,9 +4,10 @@
   background-color: var(--color-lt-gray);
   box-shadow: -5px 5px 5px -5px rgba(0, 0, 0, 0.95);
   border-radius: 0.5em;
-  width: 20%;
-  padding: 10px;
-  margin: 5px auto;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px 10px;
+  margin: 10px;
 }
 
 .movie-card__top {
@@ -15,13 +16,18 @@
   text-align: center;
 }
 
+.movie-card__bottom {
+  margin-top: 10px;
+}
+
 .movie-card__top-image {
   display: flex;
   height: auto;
   padding-right: 5px;
   margin: 0 auto;
   img {
-    width: 100px;
+    width: 100%;
+    max-width: 150px;
     border-radius: 0.3em;
   }
 }
@@ -29,14 +35,9 @@
 .movie-card__title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .movie-card__release {
-  font-size: 8px;
-}
-
-.movie-card__overview {
-  padding-top: 10px;
-  font-size: 12px;
+  font-size: 10px;
 }
