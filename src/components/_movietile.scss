@@ -4,8 +4,12 @@
   border-radius: 0.25em;
   display: flex;
   width: calc(50% - 60px);
+  min-width: 280px;
   margin: 15px;
   padding: 15px;
+  @media (max-width: 922px) {
+    width: 100%;
+  }
   img {
     border-radius: 0.25em;
     height: 160px;
