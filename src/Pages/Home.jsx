@@ -9,15 +9,12 @@ function Home() {
         <p>Aww you wanna know about me?</p>
         <p>
           Well I am an avid movie collector/watcher, mostly 4k. I know enough
-          about cars to get myself in trouble when I (try) to fix them.
+          about cars to get myself in trouble when I (try to) fix them.
         </p>
         <p>
-          Been married, have some amazing kids, all grown up now. And currently
-          the best wife in the world, no...you can't have her.
-        </p>
-        <p>
-          Was with my last company for 10 years, and sadly was laid-off, so been
-          looking for my next adventure!
+          Been married for a few years, have some amazing kids, all grown up
+          now. And currently the best wife in the world, no...you can't have
+          her.
         </p>
         <p>
           I also feel like, my site is never 'ready', partially due to not

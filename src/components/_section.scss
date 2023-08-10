@@ -1,17 +1,17 @@
 .section {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: var(--content-width);
+  height: calc(100% - 115px);
+  margin: 0 auto;
 }
 
 .section__content {
   display: flex;
-  max-width: var(--content-width);
   width: 100%;
 }
 
 .section__content--date {
-  font-size: .7em;
+  font-size: 0.7em;
   margin-bottom: 12px;
 }

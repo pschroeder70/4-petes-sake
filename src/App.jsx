@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./sass/main.scss";
 
 import Section from "./components/Section";
-import Header from "./components/Header";
+import NavBarHeader from "./components/NavBarHeader";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
 import Home from "./Pages/Home";
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Header headerTitle='4 Petes Sake' />
+        <NavBarHeader />
         <Section>
           <Routes>
             <Route path='/*' element={<Home />} />

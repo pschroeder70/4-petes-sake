@@ -1,16 +1,13 @@
 footer {
+  background-color: var(--color-drk-gray);
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   position: sticky;
   top: 100%;
-}
-
-.footer {
-  display: flex;
-  width: var(--content-width);
-  align-items: center;
   height: 50px;
-  
+  padding: 0 20px;
+  color: var(--color-lt-gray);
 }
 
 .footer__copywrite,
