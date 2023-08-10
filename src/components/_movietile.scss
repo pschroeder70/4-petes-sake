@@ -11,7 +11,7 @@
   .modal {
     border-radius: 10px;
     background-color: var(--content-bg-color);
-    width: 50%;
+    width: 40vw;
   }
   .modal::backdrop {
     background-color: rgba(33, 33, 33, 0.8);
@@ -26,14 +26,16 @@
 .movie-tile__modal {
   display: flex;
   img {
-    height: 200px;
+    height: 45vh;
     width: auto;
   }
 }
 
 .movie-tile__copy {
+  position: relative;
   margin-left: 15px;
   &-title {
+    width: 80%;
     font-size: 20px;
   }
   &-release {
@@ -42,10 +44,19 @@
   &-overview {
     font-size: 14px;
   }
+  button {
+    position: absolute;
+    top: -25px;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .movie-tile .modal {
     width: 85%;
+    img {
+      height: 20vh;
+      width: auto;
+    }
   }
 }
