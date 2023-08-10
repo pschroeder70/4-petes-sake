@@ -2,8 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
   padding: 0 20px;
   height: 65px;
+  width: calc(100% - 40px);
   background-color: var(--color-drk-gray);
   color: white;
 }
@@ -60,6 +63,7 @@
 
   .navbar-menu.open {
     display: flex; /* Show the menu when open */
+    z-index: 600;
   }
 
   .navbar-menu li {

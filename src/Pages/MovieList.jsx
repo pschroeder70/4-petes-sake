@@ -11,7 +11,7 @@ const MovieList = () => {
   useEffect(() => {
     const apiKey = "e0624cd3b3620a1cb6ffa08b3bca2eb0";
     const url =
-      "https://api.themoviedb.org/3/account/9901303/favorite/movies?language=en-US&sort_by=created_at.asc";
+      "https://api.themoviedb.org/3/account/9901303/favorite/movies?language=en-US";
     const options = {
       headers: {
         accept: "application/json",
@@ -41,18 +41,24 @@ const MovieList = () => {
   };
 
   return (
-    <div className='movie-list'>
-      {movies.map((movie) => (
-        <MovieTile key={movie.id} movie={movie} />
-      ))}
-      {currentPage < totalPages && (
-        <div className='load-more'>
-          <button onClick={handleLoadMore} className='load-more--btn'>
-            Load More
-          </button>
+    <>
+      <div className='movie-list'>
+        <div className='movie-list__header'>
+          <h1>Movie Collection</h1>
+          <p>Pages {totalPages}</p>
         </div>
-      )}
-    </div>
+        {movies.map((movie) => (
+          <MovieTile key={movie.id} movie={movie} />
+        ))}
+        {currentPage < totalPages && (
+          <div className='load-more'>
+            <button onClick={handleLoadMore}>
+              Load More
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

@@ -3,16 +3,31 @@
   box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.55);
   border-radius: 0.25em;
   display: flex;
-  width: calc(50% - 60px);
-  min-width: 280px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   margin: 15px;
-  padding: 15px;
-  @media (max-width: 922px) {
-    width: 100%;
+  padding: 5px;
+  .modal {
+    border-radius: 10px;
+    background-color: var(--content-bg-color);
+    width: 50%;
   }
+  .modal::backdrop {
+    background-color: rgba(33, 33, 33, 0.8);
+  }
+
   img {
     border-radius: 0.25em;
-    height: 160px;
+    width: 125px;
+  }
+}
+
+.movie-tile__modal {
+  display: flex;
+  img {
+    height: 200px;
+    width: auto;
   }
 }
 
@@ -26,5 +41,11 @@
   }
   &-overview {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-tile .modal {
+    width: 85%;
   }
 }

@@ -1,11 +1,11 @@
 function Home() {
   return (
     <>
-      <div className='content'>
-        <h2>What to do?</h2>
+      <div className='home'>
+        <h1>What to do?</h1>
 
-        <h3>About me? </h3>
-        <span className='section__content--date'>7/7/2023</span>
+        <h2>About me? </h2>
+        <span className='home__date'>7/7/2023</span>
         <p>Aww you wanna know about me?</p>
         <p>
           Well I am an avid movie collector/watcher, mostly 4k. I know enough

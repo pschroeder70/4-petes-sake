@@ -1,12 +1,20 @@
-h1, h2, h3, h4 {
-  font-family: 'Audiowide';
-  &:first-of-type {
-    margin-top: 0;
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Audiowide";
 }
 
-p:first-of-type {
-  margin-top: 0;
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 a {

@@ -4,10 +4,12 @@ footer {
   flex-direction: row;
   align-items: center;
   position: sticky;
-  top: 100%;
+  bottom: 0;
   height: 50px;
+  width: calc(100% - 40px);
   padding: 0 20px;
   color: var(--color-lt-gray);
+  z-index: 200;
 }
 
 .footer__copywrite,

@@ -1,0 +1,10 @@
+.theater-list li {
+  padding: 5px 0;
+}
+
+.theater-list--inner {
+  margin-left: 10px;
+  li:before {
+    content: "- ";
+  }
+}

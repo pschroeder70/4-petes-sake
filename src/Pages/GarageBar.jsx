@@ -1,12 +1,12 @@
-import React from 'react'
-
 function GarageBar() {
   return (
-    <div className="content">
-      <h2>Garage Bar</h2>
-      <h3>coming soon</h3>
-    </div>
+    <>
+      <div className='garage-bar'>
+        <h1>Garage Bar</h1>
+        <h2>coming soon</h2>
+      </div>
+    </>
   );
 }
 
-export default GarageBar
+export default GarageBar;

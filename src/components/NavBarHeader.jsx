@@ -16,16 +16,24 @@ const Navbar = () => {
       </button>
       <ul className={`navbar-menu ${isOpen ? "open" : ""}`}>
         <li className='navbar-menu__item'>
-          <Link to='/'>Home</Link>
+          <Link to='/' onClick={toggleNavbar}>
+            Home
+          </Link>
         </li>
         <li className='navbar-menu__item'>
-          <Link to='/HomeTheater'>Home Theater</Link>
+          <Link to='/HomeTheater' onClick={toggleNavbar}>
+            Home Theater
+          </Link>
         </li>
         <li className='navbar-menu__item'>
-          <Link to='/GarageBar'>Garage Bar</Link>
+          <Link to='/GarageBar' onClick={toggleNavbar}>
+            Garage Bar
+          </Link>
         </li>
         <li className='navbar-menu__item'>
-          <Link to='/Movies'>Movie Collection</Link>
+          <Link to='/Movies' onClick={toggleNavbar}>
+            Movie Collection
+          </Link>
         </li>
       </ul>
     </nav>

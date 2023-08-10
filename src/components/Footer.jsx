@@ -12,8 +12,8 @@ const Footer = (props) => {
             </a>
           </li>
           <li className='navbar-menu__item'>
-            <a href='https://www.patreon.com/4PetesSake' target='_new'>
-              $ Patreon $
+            <a href='https://www.linkedin.com/in/peteschroeder/' target='_new'>
+              LinkedIn
             </a>
           </li>
         </ul>

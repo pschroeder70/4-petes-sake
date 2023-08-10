@@ -1,0 +1,16 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 12px;
+  &__header {
+    width: 100%;
+  }
+}
+
+.load-more {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
