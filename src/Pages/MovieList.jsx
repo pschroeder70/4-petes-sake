@@ -52,11 +52,13 @@ const MovieList = () => {
         ))}
         {currentPage < totalPages && (
           <div className='load-more'>
-            <button onClick={handleLoadMore}>
-              Load More
-            </button>
+            <button onClick={handleLoadMore}>Load More</button>
           </div>
         )}
+        <div className='tmdb-legal'>
+          This product uses the TMDB API but is not endorsed or certified by
+          TMDB.
+        </div>
       </div>
     </>
   );
