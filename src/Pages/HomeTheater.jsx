@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import TheaterEquipment from "../components/TheaterEquipment";
 import TheaterHome from "./TheaterHome";
-import TV from "./tv";
-import Reciever from "./reciever";
-import Speakers from "./speakers";
-import DVD from "./dvd";
-import Game from "./game";
-import Computer from "./computer";
+import TV from "./TV";
+import Reciever from "./Reciever";
+import Speakers from "./Speakers";
+import DVD from "./DVD";
+import Game from "./Game";
+import Computer from "./Computer";
 import Remote from "./Remote";
 
 function HomeTheater() {
@@ -14,7 +14,7 @@ function HomeTheater() {
     this.classList.toggle("theater-item--active");
   };
 
-  const [activeContent, setActiveContent] = useState("A");
+  const [activeContent, setActiveContent] = useState("TheaterHome");
 
   const renderContent = () => {
     if (activeContent === "TV") {

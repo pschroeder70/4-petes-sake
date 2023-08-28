@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 function Computer() {
   return (
     <div>
-      <h3>chromebox</h3>
+      <h3>Chromebox</h3>
+
+      <p>More to come...</p>
     </div>
-  )
+  );
 }
 
-export default Computer
+export default Computer;
