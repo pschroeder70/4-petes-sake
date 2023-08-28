@@ -1,26 +1,52 @@
+import React, { useState } from "react";
+import TheaterEquipment from "../components/TheaterEquipment";
+import TheaterHome from "./TheaterHome";
+import TV from "./tv";
+import Reciever from "./reciever";
+import Speakers from "./speakers";
+import DVD from "./dvd";
+import Game from "./game";
+import Computer from "./computer";
+import Remote from "./Remote";
+
 function HomeTheater() {
+  const setActive = () => {
+    this.classList.toggle("theater-item--active");
+  };
+
+  const [activeContent, setActiveContent] = useState("A");
+
+  const renderContent = () => {
+    if (activeContent === "TV") {
+      return <TV />;
+    } else if (activeContent === "Reciever") {
+      return <Reciever />;
+    } else if (activeContent === "Speakers") {
+      return <Speakers />;
+    } else if (activeContent === "DVD") {
+      return <DVD />;
+    } else if (activeContent === "Game") {
+      return <Game />;
+    } else if (activeContent === "Computer") {
+      return <Computer />;
+    } else if (activeContent === "Remote") {
+      return <Remote />;
+    } else {
+      return <TheaterHome />;
+    }
+  };
+
   return (
     <>
       <div className='content'>
-        <h1>Home Theater</h1>
-        <ul className='theater-list'>
-          <li>Vizio 70" E-Series TV</li>
-          <li>Denon AVR-S750 H Reciever</li>
-          <li>
-            Klipsch Reference 5.1 Home Theater System :
-            <ul className='theater-list--inner'>
-              <li>R-625FA Dolby Atmos Floorstanding Speaker (2x)</li>
-              <li>R-12SW 12" 400W Powered Subwoofer</li>
-              <li>R-52C Two-Way Center Channel</li>
-              <li>R-41M Bookshelf Speakers (2x)</li>
-            </ul>
-          </li>
-          <li>Roku Streaming Stick 4K</li>
-          <li>Panasonic DP-UB820 4k DVD</li>
-          <li>Roku </li>
-          <li>X-Box Series S</li>
-          <li>Chromebox</li>
-        </ul>
+        <div className='theater-content'>
+          <h1>Home Theater</h1>
+          {renderContent()}
+        </div>
+
+        <aside className='theater-equipment'>
+          <TheaterEquipment setActiveContent={setActiveContent} />
+        </aside>
       </div>
     </>
   );

@@ -1,10 +1,66 @@
-.theater-list li {
-  padding: 5px 0;
+.content {
+  display: flex;
+  width: 100%;
 }
 
-.theater-list--inner {
-  margin-left: 10px;
-  li:before {
-    content: "- ";
+.theater-content {
+  width: 80%;
+}
+
+.theater-equipment {
+  width: 20%;
+  margin-left: 20px;
+}
+
+.theater-equipment__list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  span {
+    padding: 5px 0;
+    color: var(--link);
+    cursor: pointer;
+  }
+  span:hover {
+    text-decoration: underline;
+  }
+}
+
+.home-theater-speakers {
+  margin: 20px 0;
+}
+
+.home-theater__item {
+  margin: 20px 0;
+}
+
+.home-theater__item-image {
+  width: 150px;
+  img {
+    width: 150px;
+  }
+  &--half {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &--full {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.home-theater__item-content {
+  display: flex;
+  ul {
+    list-style-type: circle;
+    margin-left: 20px;
+  }
+  &--full {
+    flex-direction: column;
   }
 }
