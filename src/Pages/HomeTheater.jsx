@@ -33,15 +33,13 @@ function HomeTheater() {
   };
 
   return (
-    <>
-      <div className="content">
-        <div className="theater-content">
-          <h1>Home Theater</h1>
-          <TheaterEquipment setActiveContent={setActiveContent} />
-          {renderContent()}
-        </div>
+    <div className="theater">
+      <div className="theater-content">
+        <h1>Home Theater</h1>
+        <TheaterEquipment setActiveContent={setActiveContent} />
+        {renderContent()}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,7 @@
 :root {
+  --content-width: 1600px;
+  --tablet-breakpoint: 1150px;
+  --mobile-breakpoint: 769px;
   --full-height: 100vh;
 
   --color-dark-slate: #2F4F4F;
@@ -22,14 +25,10 @@
   --color-gray: rgb(117, 117, 117);
   --color-lt-gray: #b9b8b8;
 
-  --content-width: 1300px;
-
   --text: var(--color-dark-slate);
   --link: var(--color-deep-teal);
   --link-hover: var(var(--color-blue));
   --nav-hover: rgba(106, 90, 205, 0.8);
   --content-bg-color: #fff;
 
-  --break-tablet: 1150px;
-  --break-mobile: 769px;
 }

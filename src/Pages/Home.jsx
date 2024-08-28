@@ -2,7 +2,7 @@ function Home() {
   return (
     <>
       <div className='home'>
-        <h1>This is the 'home' page...</h1>
+        <h1>This is my 'home' page...</h1>
         
         <h2>This is a total work in progress</h2>
         <span className='home__date'>08/27/2024</span>

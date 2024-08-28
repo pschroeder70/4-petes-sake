@@ -1,13 +1,21 @@
 body {
   margin: 0;
   font-family: "Roboto";
-  font-size: 1em;
+  font-size: 16px;
   color: var(--text);
-  // background-color: var(--color-dark-slate);
+}
+
+picture {
+  display: block;
+  text-align: center;
+  img {
+    max-width: 75%;
+    border: 2px solid black;
+  }
 }
 
 .temp-pic {
-  width: 85%;
+  max-width: 75%;
   min-width: 200px;
   margin: 0 auto;
   height: auto;
@@ -17,7 +25,6 @@ body {
 #app {
   width: 100%;
   height: 100vh;
-  margin: auto;
 }
 
 ul {
@@ -41,16 +48,41 @@ ul {
   font-size: 0.8em;
 }
 
-button {
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "BlackOps";
   box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.55);
-  border: 0;
-  background-color: var(--color-blue);
+  border: 1px solid #000;
+  background-color: var(--color-burgundy);
   border-radius: 5px;
-  margin: 20px 0;
-  padding: 5px 10px;
+  margin: 8px;
+  padding: 10px 25px;
   font-size: 12px;
-  color: var(--color-yellow);
-  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+  &--large {
+    width: 100px;
+    height: 65px;
+    font-size: 25px;
+    margin: 8px 0;
+  }
+}
+
+.button:first-of-type:is(.button:last-of-type) {
+  margin: 0;
+}
+
+.button:hover {
+  background-color: var(--color-gray);
+  color: #000;
 }
 
 .button--clear {
@@ -58,4 +90,14 @@ button {
   background-color: transparent;
   margin: 0;
   padding: 0;
+}
+
+
+@media (max-width: 1150px) {
+  .button--large {
+    width: auto;
+    height: auto;
+    font-size: 1em;
+    padding: 5px 15px;
+  }
 }

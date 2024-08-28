@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 function SideBarItem(props) {
   return (
-    <div className="sidebar-item">
-      <Link to={props.link}>{props.title}</Link>
-    </div>
+    <Link className="button button--large" to={props.link}>{props.title}</Link>
   );
 }
 

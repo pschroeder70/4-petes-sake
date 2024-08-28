@@ -7,13 +7,13 @@ function TheaterEquipment({ setActiveContent }) {
 
   return (
     <div className='theater-equipment__list'>
-      <span onClick={() => handleContentChange("TV")}>Television</span>
-      <span onClick={() => handleContentChange("Reciever")}>Reciever</span>
-      <span onClick={() => handleContentChange("Speakers")}>Speakers</span>
-      <span onClick={() => handleContentChange("DVD")}>DVD</span>
-      <span onClick={() => handleContentChange("Game")}>Game System</span>
-      <span onClick={() => handleContentChange("Computer")}>Computer</span>
-      <span onClick={() => handleContentChange("Remote")}>Remote</span>
+      <button className="button" onClick={() => handleContentChange("TV")}>Television</button>
+      <button className="button" onClick={() => handleContentChange("Reciever")}>Reciever</button>
+      <button className="button" onClick={() => handleContentChange("Speakers")}>Speakers</button>
+      <button className="button" onClick={() => handleContentChange("DVD")}>DVD</button>
+      <button className="button" onClick={() => handleContentChange("Game")}>Game System</button>
+      <button className="button" onClick={() => handleContentChange("Computer")}>Computer</button>
+      <button className="button" onClick={() => handleContentChange("Remote")}>Remote</button>
     </div>
   );
 }

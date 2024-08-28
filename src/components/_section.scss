@@ -2,15 +2,23 @@
   display: flex;
   justify-content: center;
   height: auto;
-  width: 100%;
-  padding-top: 75px;
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  padding-top: 100px;
+  margin: auto;
 }
 
 .section__content {
   display: flex;
   width: 100%;
-  padding: 15px 20px;
-  max-width: var(--content-width);
+  margin: auto;
+  padding: 25px 0;
+}
+
+@media (max-width: 1150px) {
+  .section__content {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 768px) {

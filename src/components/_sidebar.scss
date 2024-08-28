@@ -1,10 +1,10 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  position: sticky;
+  top: 125px;
   height: 100%;
-  margin-left: 15px;
-  padding: 20px 25px;
+  margin-right: 25px;
 }
 
 .sidebar__title {
@@ -25,5 +25,12 @@
     &:first-of-type {
       font-weight: 600;
     }
+  }
+}
+
+@media (max-width: 1150px) {
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

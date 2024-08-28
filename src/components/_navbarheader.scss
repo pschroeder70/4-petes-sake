@@ -1,32 +1,56 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
-  padding: 0 20px;
-  height: 100px;
-  width: calc(100% - 40px);
   background-color: var(--color-gunmetal);
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
 }
 
-.logo {
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  margin: auto;
+}
+
+.navbar-content__logo {
   display: flex;
   align-items: center;
   font-family: "BlackOps";
   color: var(--color-burgundy);
-  text-shadow: 
-    2px 2px 0 #000, /* Horizontal and vertical offsets, blur radius, and color */
-    4px 4px 0 #000, /* Second layer for a sharper effect */
-    6px 6px 0 #000; /* Third layer for even more depth */
-  font-size: 55px;
+  text-shadow: 2px 2px 0 #000,
+    /* Horizontal and vertical offsets, blur radius, and color */ 4px 4px 0 #000,
+    /* Second layer for a sharper effect */ 6px 6px 0 #000; /* Third layer for even more depth */
+  font-size: 4em;
   height: 75px;
   &::before {
-    content: '';
-    background: url('../images/cross.png');
+    content: "";
+    background: url("../images/cross.png");
     background-size: contain;
+    background-repeat: no-repeat;
     width: 75px;
     height: 75px;
     margin-right: 25px;
+  }
+}
+
+
+@media (max-width: 1150px) {
+  .navbar-content__logo {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 769px) {
+  .navbar-content__logo {
+    font-size: 2em;
+  }
+
+  .navbar-content .button {
+    display: none;
   }
 }

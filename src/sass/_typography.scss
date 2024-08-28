@@ -2,11 +2,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Audiowide";
+  font-family: "BlackOps";
+  color: var(--color-charcoal);
 }
 
 h1 {
   font-size: 24px;
+  margin-top: 0;
 }
 
 h2 {
@@ -19,9 +21,4 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--link);
-  &:hover {
-    opacity: 75%;
-    text-decoration: underline;
-  }
 }

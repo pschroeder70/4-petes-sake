@@ -1,29 +1,11 @@
-.content {
-  display: flex;
+
+.theater {
   width: 100%;
 }
 
-.theater-content {
-  width: 80%;
-}
-
-.theater-equipment {
-  width: 20%;
-  margin-left: 20px;
-}
-
-
 .theater-equipment__list {
   display: flex;
-  span {
-    padding: 5px 0;
-    margin: 0 4px;
-    color: var(--link);
-    cursor: pointer;
-  }
-  span:hover {
-    text-decoration: underline;
-  }
+  justify-content: center;
 }
 
 .home-theater-speakers {
@@ -38,6 +20,7 @@
   width: 150px;
   img {
     width: 150px;
+    border: 0;
   }
   &--half {
     width: 50%;
