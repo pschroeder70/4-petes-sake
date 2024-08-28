@@ -1,5 +1,5 @@
-import GarageBarBar from "../images/GarageBar.jpg"
-import GarageBarSeats from "../images/GarageBarLounge.jpg"
+import GarageBarBar from "../images/garageBar.jpg"
+import GarageBarSeats from "../images/garageBarLounge.jpg"
 
 function GarageBar() {
   return (
