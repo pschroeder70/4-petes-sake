@@ -10,10 +10,6 @@ import Computer from "./Computer";
 import Remote from "./Remote";
 
 function HomeTheater() {
-  const setActive = () => {
-    this.classList.toggle("theater-item--active");
-  };
-
   const [activeContent, setActiveContent] = useState("TheaterHome");
 
   const renderContent = () => {
@@ -38,15 +34,12 @@ function HomeTheater() {
 
   return (
     <>
-      <div className='content'>
-        <div className='theater-content'>
+      <div className="content">
+        <div className="theater-content">
           <h1>Home Theater</h1>
+          <TheaterEquipment setActiveContent={setActiveContent} />
           {renderContent()}
         </div>
-
-        <aside className='theater-equipment'>
-          <TheaterEquipment setActiveContent={setActiveContent} />
-        </aside>
       </div>
     </>
   );

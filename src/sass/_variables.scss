@@ -1,6 +1,12 @@
 :root {
   --full-height: 100vh;
 
+  --color-dark-slate: #2F4F4F;
+  --color-charcoal: #36454F;
+  --color-gunmetal: #2C3539;
+  --color-deep-teal: #014F43;
+  --color-burgundy: #800020;
+
   --color-one: #070707;
   --color-two: #ec5cbb;
   --color-three: #3524fe;
@@ -18,8 +24,10 @@
 
   --content-width: 1300px;
 
-  --text: var(--color-one);
-  --link: var(--color-blue);
+  --text: var(--color-dark-slate);
+  --link: var(--color-deep-teal);
+  --link-hover: var(var(--color-blue));
+  --nav-hover: rgba(106, 90, 205, 0.8);
   --content-bg-color: #fff;
 
   --break-tablet: 1150px;

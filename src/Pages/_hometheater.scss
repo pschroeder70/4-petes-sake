@@ -12,12 +12,12 @@
   margin-left: 20px;
 }
 
+
 .theater-equipment__list {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
   span {
     padding: 5px 0;
+    margin: 0 4px;
     color: var(--link);
     cursor: pointer;
   }

@@ -2,7 +2,16 @@ function Home() {
   return (
     <>
       <div className='home'>
-        <h1>What to do?</h1>
+        <h1>This is the 'home' page...</h1>
+        
+        <h2>This is a total work in progress</h2>
+        <span className='home__date'>08/27/2024</span>
+        <p>While I know my way around web-dev, I am in no way a designer, as you can clearly see.</p>
+        <h2>Update...</h2>
+        <span className='home__date'>2/15/2024</span>
+        <p>Where does the time go?  Have not worked on this much at all... did build a fake bar that I wish I owned (maybe someday). If you want to give it a look check it out <a href="https://at-the-door.netlify.app/" alt="link to At the Door" title="link" target="_blank">At the Door</a>.
+        </p>
+        <p>Still looking for a real job in web dev...haven't lost hope, but it's getting there.  On a very positive note, I have lost 25lbs!!  Walking a ton and eating less works!</p>
 
         <h2>About me? </h2>
         <span className='home__date'>7/7/2023</span>
@@ -10,11 +19,6 @@ function Home() {
         <p>
           Well I am an avid movie collector/watcher, mostly 4k. I know enough
           about cars to get myself in trouble when I (try to) fix them.
-        </p>
-        <p>
-          Been married for a few years, have some amazing kids, all grown up
-          now. And currently the best wife in the world, no...you can't have
-          her.
         </p>
         <p>
           I also feel like, my site is never 'ready', partially due to not

@@ -5,68 +5,28 @@
   position: fixed;
   top: 0;
   padding: 0 20px;
-  height: 65px;
+  height: 100px;
   width: calc(100% - 40px);
-  background-color: var(--color-drk-gray);
-  color: white;
+  background-color: var(--color-gunmetal);
 }
 
 .logo {
   display: flex;
-  font-size: 20px;
-  color: var(--color-lt-gray);
-}
-
-.navbar-menu--toggle {
-  display: none; /* Hide the button on larger screens */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.navbar-menu {
-  list-style: none;
-  display: flex;
-}
-
-.navbar-menu__item {
-  margin-left: 20px;
-  cursor: pointer;
-  a {
-    color: #fff;
-    &:hover,
-    &:active {
-      color: var(--color-blue);
-    }
-  }
-}
-
-/* Media query for screens below a certain width */
-@media screen and (max-width: 768px) {
-  .navbar-menu--toggle {
-    display: block;
-  }
-
-  .navbar-menu {
-    display: none; /* Hide the menu by default */
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100vw;
-    background-color: #333;
-    padding: 10px 20px;
-    z-index: 100;
-  }
-
-  .navbar-menu.open {
-    display: flex; /* Show the menu when open */
-    z-index: 600;
-  }
-
-  .navbar-menu li {
-    margin: 10px 0;
+  align-items: center;
+  font-family: "BlackOps";
+  color: var(--color-burgundy);
+  text-shadow: 
+    2px 2px 0 #000, /* Horizontal and vertical offsets, blur radius, and color */
+    4px 4px 0 #000, /* Second layer for a sharper effect */
+    6px 6px 0 #000; /* Third layer for even more depth */
+  font-size: 55px;
+  height: 75px;
+  &::before {
+    content: '';
+    background: url('../images/cross.png');
+    background-size: contain;
+    width: 75px;
+    height: 75px;
+    margin-right: 25px;
   }
 }

@@ -19,6 +19,7 @@ function Remote() {
             <source srcset={sofabaton} type='image/webp' />
             <img src={sofabatonj} alt='SofaBaton X1' />
           </picture>
+          <p>Update : I have gone back to my Logitech Harmony Elite.</p>
           <p>
             To be honest, I don't love it. My Logitech Harmony Elite was far
             more reliable, and I think about going back to it all the time. But

@@ -45,6 +45,7 @@ const MovieList = () => {
       <div className='movie-list'>
         <div className='movie-list__header'>
           <h1>Movie Collection</h1>
+          <p>I am not thrilled with how this displays my collection, I kinda want to build by own database. New project?</p>
           <p>Pages {totalPages}</p>
         </div>
         {movies.map((movie) => (

@@ -1,9 +1,15 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import SideBarItem from "./SideBarItem";
+
 function SideBar(props) {
   return (
-    <aside className='sidebar'>
-      <h3 className='sidebar__title'>{props.title}</h3>
-      <p>Not sure what stuff, but something has to go over here.</p>
-    </aside>
+    <nav className='sidebar'>
+      <SideBarItem link='/' title='Home' />
+      <SideBarItem link='/GarageBar' title='Garage Bar' />
+      <SideBarItem link='/HomeTheater' title='Home Theater' />
+      <SideBarItem link='/Movies' title='Movie Collection' />
+    </nav>
   );
 }
 
