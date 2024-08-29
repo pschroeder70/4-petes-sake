@@ -80,7 +80,8 @@ ul {
   margin: 0;
 }
 
-.button:hover {
+.button:hover,
+.button--active {
   background-color: var(--color-gray);
   color: #000;
 }

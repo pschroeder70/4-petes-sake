@@ -1,3 +1,14 @@
+.garage-bar {
+  display: flex;
+  width: 100%;
+}
+
+.garage-bar__aside {
+  width: auto;
+  margin-left: 25px;
+  text-wrap: nowrap;
+}
+
 .garage-bar__pics {
   display: flex;
   align-items: center;

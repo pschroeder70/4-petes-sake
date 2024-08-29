@@ -1,9 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function SideBarItem(props) {
+function SideBarItem({ link, title }) {
   return (
-    <Link className="button button--large" to={props.link}>{props.title}</Link>
+    <NavLink
+      to={link}
+      className={({ isActive }) =>
+        isActive
+          ? "button button--large button--active"
+          : "button button--large"
+      }
+      exact="true" // Ensure exact matching for the root path
+    >
+      {title}
+    </NavLink>
   );
 }
 

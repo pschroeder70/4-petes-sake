@@ -10,7 +10,7 @@ function TheaterHome() {
         friendly build up.
       </p>
       <picture>
-        <source srcset={EntertainmentCenter} type="image/webp" />
+        <source srcSet={EntertainmentCenter} type="image/webp" />
         <img
           src={EntertainmentCenter}
           role="presentation"
