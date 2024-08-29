@@ -1,68 +1,47 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import MovieTile from "./../components/MovieTile";
+import React, { useState, useEffect } from "react";
+import MovieInfo from "./MovieInfo";
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const limit = 30; // Number of movies to fetch per page
+function MovieList() {
+  const [savedMovies, setSavedMovies] = useState([]);
 
   useEffect(() => {
-    const apiKey = "e0624cd3b3620a1cb6ffa08b3bca2eb0";
-    const url =
-      "https://api.themoviedb.org/3/account/9901303/favorite/movies?language=en-US";
-    const options = {
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMDYyNGNkM2IzNjIwYTFjYjZmZmEwOGIzYmNhMmViMCIsInN1YiI6IjVmZDEyMGUxMmNlYjUzMDA0MmVlMGY1MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0aBdfzlulpnHHeQ5yi__OgCmcOtrUUCuZL-xET525c0",
-      },
-    };
+    // Load movies from localStorage when the component mounts
+    const savedMoviesJson = localStorage.getItem("movies");
+    try {
+      if (savedMoviesJson) {
+        const savedMovies = JSON.parse(savedMoviesJson);
 
-    const fetchMovies = async (page) => {
-      try {
-        const response = await axios.get(`${url}&page=${page}`, options);
-        const data = response.data;
-        setMovies((prevMovies) => [...prevMovies, ...data.results]);
-        setTotalPages(data.total_pages);
-      } catch (error) {
-        console.error("Error fetching movies:", error);
+        // Filter out invalid movies
+        const validMovies = savedMovies.filter(
+          (movie) =>
+            movie &&
+            movie.Response === "True" &&
+            movie.Title &&
+            movie.Year &&
+            movie.Poster !== "N/A"
+        );
+
+        setSavedMovies(validMovies);
       }
-    };
-
-    fetchMovies(currentPage);
-  }, [currentPage]);
-
-  const handleLoadMore = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage((prevPage) => prevPage + 1);
+    } catch (error) {
+      console.error("Error parsing JSON from localStorage:", error);
     }
-  };
+  }, []);
 
   return (
-    <>
-      <div className='movie-list'>
-        <div className='movie-list__header'>
-          <h1>Movie Collection</h1>
-          <p>I am not thrilled with how this displays my collection, I kinda want to build by own database. New project?</p>
-          <p>Pages {totalPages}</p>
-        </div>
-        {movies.map((movie) => (
-          <MovieTile key={movie.id} movie={movie} />
-        ))}
-        {currentPage < totalPages && (
-          <div className='load-more'>
-            <button onClick={handleLoadMore}>Load More</button>
-          </div>
+    <div>
+      <h1>Movie Collection</h1>
+      <div className="movies">
+        {savedMovies.length > 0 ? (
+          savedMovies.map((movie, index) => (
+            <MovieInfo key={index} movie={movie} showDelete={false} />
+          ))
+        ) : (
+          <p>No movies found.</p>
         )}
-        <div className='tmdb-legal'>
-          This product uses the TMDB API but is not endorsed or certified by
-          TMDB.
-        </div>
       </div>
-    </>
+    </div>
   );
-};
+}
 
 export default MovieList;
