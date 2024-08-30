@@ -16,6 +16,7 @@ function SearchForm({ onSearch }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
+        name="Title"
         value={movieTitle}
         onChange={(e) => setMovieTitle(e.target.value)}
         placeholder="Enter movie title"
@@ -23,6 +24,7 @@ function SearchForm({ onSearch }) {
       />
       <input
         type="text"
+        name="Year"
         value={year}
         onChange={(e) => setYear(e.target.value)}
         placeholder="Enter year (optional)"

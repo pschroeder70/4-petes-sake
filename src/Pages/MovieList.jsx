@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react";
 import MovieInfo from "./MovieInfo";
+import supabase from "../components/SupabaseClient";
 
 function MovieList() {
   const [savedMovies, setSavedMovies] = useState([]);
 
   useEffect(() => {
-    // Load movies from localStorage when the component mounts
-    const savedMoviesJson = localStorage.getItem("movies");
-    try {
-      if (savedMoviesJson) {
-        const savedMovies = JSON.parse(savedMoviesJson);
+    // Load movies from Supabase when the component mounts
+    const fetchSavedMovies = async () => {
+      const { data, error } = await supabase
+        .from('movies')
+        .select('*');
 
-        // Filter out invalid movies
-        const validMovies = savedMovies.filter(
-          (movie) =>
-            movie &&
-            movie.Response === "True" &&
-            movie.Title &&
-            movie.Year &&
-            movie.Rated &&
-            movie.Poster !== "N/A"
-        );
-
-        setSavedMovies(validMovies);
+      if (error) {
+        console.log('Error fetching saved movies:', error);
+      } else {
+        setSavedMovies(data);
+        console.log(`set ${data}`)
       }
-    } catch (error) {
-      console.error("Error parsing JSON from localStorage:", error);
-    }
+    };
+
+    fetchSavedMovies();
   }, []);
 
   return (
