@@ -18,6 +18,7 @@ function MovieList() {
             movie.Response === "True" &&
             movie.Title &&
             movie.Year &&
+            movie.Rated &&
             movie.Poster !== "N/A"
         );
 
@@ -34,7 +35,7 @@ function MovieList() {
       <div className="movies">
         {savedMovies.length > 0 ? (
           savedMovies.map((movie, index) => (
-            <MovieInfo key={index} movie={movie} showDelete={false} />
+            <MovieInfo key={index} movie={movie} showDelete={false} showPopup={true} />
           ))
         ) : (
           <p>No movies found.</p>

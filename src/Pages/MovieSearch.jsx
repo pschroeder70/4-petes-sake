@@ -8,13 +8,15 @@ function MovieSearch() {
 
   const apiKey = "869c0d7a"; // Replace with your OMDb API key
 
-  const fetchMovieData = (title) => {
+  const fetchMovieData = (title, year) => {
     const formattedTitle = title.split(" ").join("+");
-    fetch(
-      `http://www.omdbapi.com/?t=${encodeURIComponent(
-        formattedTitle
-      )}&apikey=${apiKey}`
-    )
+    let url = `http://www.omdbapi.com/?t=${encodeURIComponent(formattedTitle)}&apikey=${apiKey}`;
+    
+    if (year) {
+      url += `&y=${year}`; // Append year if provided
+    }
+
+    fetch(url)
       .then((response) => response.json())
       .then((data) => {
         if (data.Response === "True") {

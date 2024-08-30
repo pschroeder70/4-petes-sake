@@ -8,7 +8,7 @@ function SideBar(props) {
       <SideBarItem link='/GarageBar' title='Garage Bar' />
       <SideBarItem link='/HomeTheater' title='Home Theater' />
       <SideBarItem link='/MovieList' title='Movie Collection' />
-      <SideBarItem link='/MovieSearch' title='Movie Search' />
+      <SideBarItem link='/MovieSearch' title='Movie Search' hidden='true' />
     </nav>
   );
 }
