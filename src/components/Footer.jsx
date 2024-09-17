@@ -6,7 +6,7 @@ const Footer = (props) => {
           &copy; {new Date().getFullYear()} All Rights Reserved, I guess?
         </div>
         <div className="footer-content__social-links">
-          TBD
+          <a href="https://peteschroeder.us/" target="_blank">peteschroeder.us</a>
         </div>
       </div>
     </footer>
